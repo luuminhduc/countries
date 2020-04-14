@@ -1,6 +1,7 @@
 const search = document.getElementById('search');
 const filter = document.getElementById('filter');
 const container = document.querySelector('.country-container');
+const mode = document.getElementById('mode');
 const list = [];
 let region;
 
@@ -97,4 +98,8 @@ filter.addEventListener('change', (e) => {
             block.style.display = 'none';
         }
     })
+});
+
+mode.addEventListener('click', (e) => {
+  document.body.classList.toggle('active');
 })
